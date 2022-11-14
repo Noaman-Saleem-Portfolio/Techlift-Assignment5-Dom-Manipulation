@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+    <title>Count and display items of a dropdown list - w3resource</title>
+  </head>
+  <body>
+    <form>
+      Select your favorite Color :
+
+      <select id="mySelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>White</option>
+      </select>
+      <input
+        type="button"
+        onclick="getOptions()"
+        value="Count and Output all items" />
+    </form>
+
+    <script>
+      let drop = document.getElementById("mySelect");
+      let counter = 0;
+      let len = drop.children.length;
+      // console.log(len);
+      let str = "";
+      function getOptions() {
+        str += `Total items = ${drop.children.length}\n`;
+        console.log(`Total items = ${drop.children.length}`);
+
+        for (let i of drop.children) {
+          str += `Item ${counter} is ${i.innerHTML}\n`;
+          //   console.log(`Item ${counter} is ${i.innerHTML}`);
+          counter++;
+        }
+        alert(str);
+      }
+      // console.log(drop);
+      // console.log("Connected");
+    </script>
+  </body>
+</html>

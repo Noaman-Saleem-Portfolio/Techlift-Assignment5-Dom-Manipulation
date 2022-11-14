@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit.
+      Optio eos autem dolor <strong>consequatur</strong> delectus minus, sequi
+      aliquam aspernatur modi sit? Assumenda reprehenderit at exercitationem
+      fugit culpa pariatur dolore, maxime cupiditate ad eius nihil nemo aliquam
+      commodi, quas distinctio ut animi.
+    </p>
+
+    <script>
+      // console.log("Connected");
+      let bold = document.querySelectorAll("strong");
+      console.log(bold);
+      for (let i = 0; i < bold.length; i++) {
+        bold[i].addEventListener("mouseenter", () => {
+          bold[i].style.backgroundColor = "red";
+          bold[i].style.color = "#fff";
+        });
+        bold[i].addEventListener("mouseout", () => {
+          bold[i].style.backgroundColor = "";
+          bold[i].style.color = "";
+        });
+      }
+    </script>
+  </body>
+</html>
